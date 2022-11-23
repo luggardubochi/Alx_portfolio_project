@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/Python_Version-3.8-brown.svg)
 ![](https://img.shields.io/badge/Status-Complete-green.svg)
 
-## <p align="center"><img src="pictures_for_readme/heart.png" width=40px> ***_Introducing My New Project Lito Music Player_*** <img src="pictures_for_readme/heart.png" width=40px></p>
+## <p align="center"><img src="pictures_for_readme/heart.png" width=40px> ***_Introducing Our New Project Lito Music Player_*** <img src="pictures_for_readme/heart.png" width=40px></p>
 
 
 
