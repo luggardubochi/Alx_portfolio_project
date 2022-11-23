@@ -8,6 +8,8 @@
 
 ## <p align="center"><img src="pictures_for_readme/heart.png" width=40px> ***_Introducing Our New Project Lito Music Player_*** <img src="pictures_for_readme/heart.png" width=40px></p>
 
+<p align="center"><img src="pictures_for_readme/IMG_20221123_150915_323.jpg"></p>
+
 
 
 ### <p align="center">💡 ***_This is a Multi-Functioning Music Player, a Basic Project in Python_*** 💡</p>
