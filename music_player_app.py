@@ -53,7 +53,7 @@ class MusicPlayer:
 
     def basic_setup(self):
         # Heading
-        Label(self.window,text="Generation Music Player", font=("Arial",20,"bold","italic"),bg="#141414",fg="gold").place(x=240,y=25)
+        Label(self.window,text="Lito Music Player", font=("Arial",20,"bold","italic"),bg="#141414",fg="gold").place(x=240,y=25)
 
         # Song Collection
         frame = Frame(self.window)
@@ -265,7 +265,7 @@ class MusicPlayer:
             
 if __name__ == '__main__':
     window = Tk()
-    window.title("Generation Music player")
+    window.title("Lito Music player")
     window.iconbitmap("Pictures/music_icon.ico")
     window.geometry("828x515")
     window.maxsize(830,515)
