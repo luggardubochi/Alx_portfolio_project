@@ -4,13 +4,13 @@
 import requests
 import base64
 import json
+import os
 
 url = 'https://accounts.spotify.com/api/token'
 headers = {}
 data = {}
-
-clientId = "8e6d84ed1ede44739df3bc59577cc19a"
-clientSecret = "928ad332a24f4a758fc910157842bfcc"
+client_id=os.getenv("client_id"),
+client_secret=os.getenv("clent_secret")
 
 message = f"{clientId}:{clientSecret}"
 messageBytes = message.encode('ascii')
