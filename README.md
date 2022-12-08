@@ -56,18 +56,16 @@ The software Lito Music Player was created with fulfillment in mind. This projec
 ### 🎯 <u>***_Module That you have to Install Manually:-_***</u>
 ### 1. ***_Pillow_***
 
-<p align="center">
 Pillow is a Python Imaging Library (PIL), which adds support for opening, manipulating, and saving images. The current version identifies and reads a large number of formats. Write support is intentionally restricted to the most commonly used interchange and presentation formats.
-</p>
+
 
 #### 🎯 Install Pillow by writing `pip install pillow` in your ***cmd or Terminal***
 🎯 
 [To see Pillow Documentation Click Here](https://pypi.org/project/Pillow/)
 
 ### 2. ***_Pygame_***
-<p align="center">
+
 Pygame is a free and open-source cross-platform library for the development of multimedia applications like video games using Python. It uses the Simple DirectMedia Layer library and several other popular libraries to abstract the most common functions, making writing these programs a more intuitive task.
-</p>
 
 #### 🎯 Install Pygame by writing `pip install pygame` in your ***cmd or Terminal***
 🎯 
@@ -75,9 +73,7 @@ Pygame is a free and open-source cross-platform library for the development of m
 
 ### 3. ***_Mutagen_***
 
-<p align="center">
 Mutagen is a Python module to handle audio metadata. It supports ASF, FLAC, MP4, Monkey’s Audio, MP3, Musepack, Ogg Opus, Ogg FLAC, Ogg Speex, Ogg Theora, Ogg Vorbis, True Audio, WavPack, OptimFROG, and AIFF audio files. All versions of ID3v2 are supported, and all standard ID3v2.4 frames are parsed. It can read Xing headers to accurately calculate the bitrate and length of MP3s. ID3 and APEv2 tags can be edited regardless of audio format. It can also manipulate Ogg streams on an individual packet/page level.
-</p>
 
 #### 🎯 Install Mutagen by writing `pip install mutagen` in your ***cmd or Terminal***
 🎯 
@@ -90,7 +86,7 @@ Mutagen is a Python module to handle audio metadata. It supports ASF, FLAC, MP4,
 # Video Presentation
 1. Youtube link for Lito music player include [First](https://youtu.be/merDFVLWvEA) and [Second](https://youtu.be/MaQYSwlcods).
 
-# project blog 
+# Project Blog 
 1. [Luggard Ubochi](https://medium.com/@luggardubochi/this-is-a-music-player-application-with-the-purpose-of-creating-a-satisfaction-for-the-taste-of-549a5dcf23da)
 
 
