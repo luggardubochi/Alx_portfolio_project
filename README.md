@@ -11,6 +11,9 @@
 <p align="center"><img src="pictures_for_readme/Lito Music player 12_8_2022 12_55_28 AM.png"></p>
 
 
+# Introduction
+
+The software Lito Music Player was created with fulfillment in mind. This project was selected due to its ease of completion in a short amount of time and simplicity. It was constructed by my team and I under the able direction of Samarpan's explanation and directions. This project, which was created using Python, examines the use of several of the language's libraries, including tkinter, tinytag, mutagen, and others. The use of APIs, which were employed to extract musical lyrics, is also explored. The wonderful folks in my group were an enormous motivator as well.
 
 ### <p align="center">💡 ***_This is a Multi-Functioning Music Player, a Basic Project in Python_*** 💡</p>
 
@@ -82,3 +85,9 @@ Mutagen is a Python module to handle audio metadata. It supports ASF, FLAC, MP4,
 # Project landing page  https://luggardubochi.wixsite.com/lito-music-player and https://ddilibe.github.io/Alx-Project-Landing-Page/
 # youtube link for Lito music player https://youtu.be/merDFVLWvEA and https://youtu.be/MaQYSwlcods.
 # project blog https://medium.com/@luggardubochi/this-is-a-music-player-application-with-the-purpose-of-creating-a-satisfaction-for-the-taste-of-549a5dcf23da
+
+
+# Team Members
+1. Team Lead: Luggard Ubochi ([Twitter](https://twitter.com/LuggardU), [Email](luggardubochi@gmail.com), [Github](https://github.com/luggardubochi))
+2. Team Member: Fidelugwuowo Dilibe ([Twitter](https://twitter.com/therealdilibe), [Email](franklinfidelugwuowo@gmail.com), [Github](https://github.com/Ddilibe))
+3. Team Member: Mehariw Amlake ([Email](mehariwamlake@gmail.com))
