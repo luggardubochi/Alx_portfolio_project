@@ -1,9 +1,15 @@
+#!/usr/bin/env python
+
 #  music_player_app #
-from tkinter import *
-from tkinter import filedialog,messagebox,colorchooser
+import os
+import sys
+import requests
 import time,pygame
-from PIL import ImageTk,Image
+from tkinter import *
 from mutagen.mp3 import MP3
+from PIL import ImageTk,Image
+from tkinter import filedialog,messagebox,colorchooser
+from frame import generate_audiometadata, generate_lyrics
 
 class MusicPlayer:
     def __init__(self, root, backward_img, play_img, pause_img, stop_image_btn, forward_img):
@@ -71,11 +77,15 @@ class MusicPlayer:
         song_add = Button(self.window,text="Add Song",font=("Helvetica",15,"bold","italic"), bg="#262626",fg="#ff1414", activebackground="#262626", activeforeground="#ff1414", width=12, height=1, relief=RAISED, borderwidth=5, command=self.add_song)
         song_add.place(x=480,y=352)
 
-        delete_song = Button(self.window, text="Delete Selected Song", font=("Helvetica", 14, "bold", "italic"), bg="#262626", fg="#ff1414", activebackground="#262626", activeforeground="#ff1414", width= 27, relief=RAISED, borderwidth=5,command=self.delete_selected_song)
+        delete_song = Button(self.window, text="Remove Song", font=("Helvetica", 14, "bold", "italic"), bg="#262626", fg="#ff1414", activebackground="#262626", activeforeground="#ff1414", width= 12, relief=RAISED, borderwidth=5,command=self.delete_selected_song)
         delete_song.place(x=480, y=437)
 
         song_counter = Button(self.window, text="Song Counter", width=13,font=("Helvetica", 15, "bold", "italic"), activebackground="#262626", activeforeground="#ff1414", bg="#262626", fg="#ff1414", relief=RAISED, borderwidth=5, command=self.song_counter)
         song_counter.place(x=650, y=352)
+
+        See_lyrics = Button(self.window, text="Lyrics", font=("Helvetica", 15, "bold", "italic"), bg="#262626", fg="#ff1414", activebackground="#262626", relief=RAISED, borderwidth=5, command=self.get_lyics, width=12)
+        See_lyrics.place(x=650, y=437)
+
 
     def image_button_function_set(self):# Instructional buttons
         self.play_btn.config(command=lambda: self.play_song('<Return>'))
@@ -126,9 +136,19 @@ class MusicPlayer:
             # Song Duration Label Position Set and Song Duration Function call
             self.song_duration_bar.place(x=210,y=285)
             self.song_duration_time()
+            # self.next_song()
         except:
             print("\nError in play song")
             self.next_song()
+
+    def add_song_from_all(self):
+        user = os.getlogin()
+        dir_path = os.path.dirname(f"C:\\Users\\{user}\\Music\\")
+        # dir_path = os.path.dirname(os.path.realpath(__file__))
+        for root, dirs, files in os.walk(dir_path):
+            for file in files:
+                if file.endswith(".mp3" or ".aac" or ".wav" or ".flac" or ".ogg"):
+                    self.my_list_song.insert(END, root+'\\'+file)
 
     def song_duration_time(self):# Song duration time controller
         try:
@@ -248,6 +268,26 @@ class MusicPlayer:
         shuffle_bar_indicator = Label(self.window,text="  Off    Shuffle    On",font=("Arial",10,"bold"),fg="blue",bg="#9f9fff")
         shuffle_bar_indicator.place(x=310,y=435)
 
+    def get_lyics(self):
+        song = self.my_list_song.get(ACTIVE)
+        title, artist = generate_audiometadata(song)
+        lyrics = f"{str(title)} by {str(artist)}\n\n\n"
+        lyrics += str(generate_lyrics(title, artist))
+        new_lyrics = Tk()
+        new_lyrics.title("Lyrics")
+        new_lyrics.geometry("800x400")
+        new_lyrics.maxsize(600,500)
+        new_lyrics.minsize(200,200)
+        new_lyrics.config(bg="Light grey")
+        scroll_bar = Scrollbar(new_lyrics)
+        text_widget = Text(new_lyrics, height=400, width=400, yscrollcommand=scroll_bar.set)
+        scroll_bar.pack(side=RIGHT, fill=Y)
+        text_widget.pack(side=LEFT, fill=BOTH)
+        scroll_bar.config(command=text_widget.yview)
+        text_widget.insert(END, lyrics)
+        new_lyrics.mainloop()
+        
+
     def shuffle_maintain(self, indicator):# Shuffle functionality
         if int(indicator) ==1:
             self.shuffle_counter = 0
@@ -274,24 +314,27 @@ if __name__ == '__main__':
 
     backward_image_take = ImageTk.PhotoImage(Image.open('Pictures/backward.png'))
     backward_btn_img = Button(window, image=backward_image_take, bg="#323232", activebackground="#323232", relief=RAISED, bd=3)
-    backward_btn_img.place(x=25,y=350)
+    backward_btn_img.place(x=20,y=350)
 
     play_image_take = ImageTk.PhotoImage(Image.open('Pictures/play.png').resize((40,40),Image.ANTIALIAS))
     play_btn_img = Button(window,image=play_image_take,bg="#323232", activebackground="#323232", relief=RAISED,bd=3)
-    play_btn_img.place(x=115,y=350)
+    play_btn_img.place(x=105,y=350)
 
     pause_image_take = ImageTk.PhotoImage(Image.open('Pictures/pause.png'))
     pause_btn_img = Button(window,image=pause_image_take,bg="#323232", activebackground="#323232",relief=RAISED,bd=3)
-    pause_btn_img.place(x=210,y=350)
+    pause_btn_img.place(x=200,y=350)
 
     stop_image_take = ImageTk.PhotoImage(Image.open('Pictures/stop_img_is.png').resize((40,40),Image.ANTIALIAS))
     stop_btn_img = Button(window,image=stop_image_take,bg="#323232", activebackground="#323232", relief=RAISED,bd=3)
-    stop_btn_img.place(x=305,y=350)
+    stop_btn_img.place(x=295,y=350)
 
     forward_image_take = ImageTk.PhotoImage(Image.open('Pictures/forward.png'))
     forward_btn_img = Button(window,image=forward_image_take,bg="#323232", activebackground="#323232", relief=RAISED,bd=3)
-    forward_btn_img.place(x=400,y=350)
+    forward_btn_img.place(x=390,y=350)
 
-    MusicPlayer(window,backward_btn_img,play_btn_img,pause_btn_img,stop_btn_img,forward_btn_img)
+    
+    music = MusicPlayer(window,backward_btn_img,play_btn_img,pause_btn_img,stop_btn_img,forward_btn_img)
+    music.add_song_from_all()
+    window.update()
 
     window.mainloop()
