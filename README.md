@@ -84,14 +84,14 @@ Mutagen is a Python module to handle audio metadata. It supports ASF, FLAC, MP4,
 [To see Mutagen Documentation Click Here](https://pypi.org/project/mutagen/)
 
 # Project landing page
-1. [Luggard Ubochi] (https://luggardubochi.wixsite.com/lito-music-player) 
-2. [Fidelugwuowo Dilibe] (https://ddilibe.github.io/Alx-Project-Landing-Page/)
+1. [Luggard Ubochi](https://luggardubochi.wixsite.com/lito-music-player) 
+2. [Fidelugwuowo Dilibe](https://ddilibe.github.io/Alx-Project-Landing-Page/)
 
 # Video Presentation
 1. Youtube link for Lito music player include [First](https://youtu.be/merDFVLWvEA) and [Second](https://youtu.be/MaQYSwlcods).
 
 # project blog 
-1. [Luggard Ubochi] (https://medium.com/@luggardubochi/this-is-a-music-player-application-with-the-purpose-of-creating-a-satisfaction-for-the-taste-of-549a5dcf23da)
+1. [Luggard Ubochi](https://medium.com/@luggardubochi/this-is-a-music-player-application-with-the-purpose-of-creating-a-satisfaction-for-the-taste-of-549a5dcf23da)
 
 
 # Team Members
