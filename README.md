@@ -34,6 +34,7 @@ The software Lito Music Player was created with fulfillment in mind. This projec
 
 ### 💻 ***_<u>Shortcut Key for Easy Control:-</u>_*** 
 <center>
+
 | Functionality         |  Shortcut Key   |
 | :-------------:       |:-----------:    |
 | Next Song             | Right Arrow Key |
@@ -42,6 +43,7 @@ The software Lito Music Player was created with fulfillment in mind. This projec
 | Play Song After Pause | Spacebar        |
 | Stop Song             | ESC             |
 | Delete All Song       | Del             |
+
 </center>
 ---
 
