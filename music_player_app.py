@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 
 #  music_player_app #
-from tkinter import *
-from tkinter import filedialog,messagebox,colorchooser
-import time,pygame
-from PIL import ImageTk,Image
-from mutagen.mp3 import MP3
+import os
+import sys
 import requests
+import time,pygame
+from tkinter import *
+from mutagen.mp3 import MP3
+from PIL import ImageTk,Image
+from tkinter import filedialog,messagebox,colorchooser
 from frame import generate_audiometadata, generate_lyrics
 
 class MusicPlayer:
@@ -134,9 +136,19 @@ class MusicPlayer:
             # Song Duration Label Position Set and Song Duration Function call
             self.song_duration_bar.place(x=210,y=285)
             self.song_duration_time()
+            # self.next_song()
         except:
             print("\nError in play song")
             self.next_song()
+
+    def add_song_from_all(self):
+        user = os.getlogin()
+        dir_path = os.path.dirname(f"C:\\Users\\{user}\\Music\\")
+        # dir_path = os.path.dirname(os.path.realpath(__file__))
+        for root, dirs, files in os.walk(dir_path):
+            for file in files:
+                if file.endswith(".mp3" or ".aac" or ".wav" or ".flac" or ".ogg"):
+                    self.my_list_song.insert(END, root+'\\'+file)
 
     def song_duration_time(self):# Song duration time controller
         try:
@@ -259,8 +271,8 @@ class MusicPlayer:
     def get_lyics(self):
         song = self.my_list_song.get(ACTIVE)
         title, artist = generate_audiometadata(song)
-        lyrics = f"\b{title} by {artist}\n\n\n"
-        lyrics += generate_lyrics(title, artist)
+        lyrics = f"{str(title)} by {str(artist)}\n\n\n"
+        lyrics += str(generate_lyrics(title, artist))
         new_lyrics = Tk()
         new_lyrics.title("Lyrics")
         new_lyrics.geometry("800x400")
@@ -320,6 +332,9 @@ if __name__ == '__main__':
     forward_btn_img = Button(window,image=forward_image_take,bg="#323232", activebackground="#323232", relief=RAISED,bd=3)
     forward_btn_img.place(x=390,y=350)
 
-    MusicPlayer(window,backward_btn_img,play_btn_img,pause_btn_img,stop_btn_img,forward_btn_img)
+    
+    music = MusicPlayer(window,backward_btn_img,play_btn_img,pause_btn_img,stop_btn_img,forward_btn_img)
+    music.add_song_from_all()
+    window.update()
 
     window.mainloop()

@@ -34,6 +34,8 @@ def generate_lyrics(title, artist):
         info.artist = artist
         info.title = title
         lyrics = info.getLyrics()
+        if lyrics == 0:
+            lyrics = "Unable to generate the lyrics of the audio"
     except Exception as e:
         lyrics = "No Internet connection\nConnect to a reliable internet source"
     return lyrics
