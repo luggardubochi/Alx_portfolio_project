@@ -33,15 +33,16 @@ The software Lito Music Player was created with fulfillment in mind. This projec
 ---
 
 ### 💻 ***_<u>Shortcut Key for Easy Control:-</u>_*** 
-- ### ***_<u>Functionality-------Shortcut Key</u>_***
-- #### ***_Next Song---------------->Right Arrow Key_***
-- #### ***_Previous Song---------------->Left Arrow Key_***
-- #### ***_Pause Song--------------------->Spacebar_***
-- #### ***_Play Song After Pause--------------------->Spacebar_***
-- #### ***_Stop Song--------------------->ESC_***
-- #### ***_Delete All Song --------------------->Del_***
-
-
+<center>
+| Functionality |Shortcut Key |
+| :-------------:|:-----------:|
+| Next Song | Right Arrow Key |
+| Previous Song | Left Arrow Key |
+| Pause Song | Spacebar |
+| Play Song After Pause | Spacebar |
+| Stop Song | ESC |
+| Delete All Song | Del |
+</center>
 ---
 
 ### ⚒️ ***_<u>Python Module Used Here:-</u>_*** 
