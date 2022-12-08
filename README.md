@@ -34,14 +34,14 @@ The software Lito Music Player was created with fulfillment in mind. This projec
 
 ### 💻 ***_<u>Shortcut Key for Easy Control:-</u>_*** 
 <center>
-| Functionality |Shortcut Key |
-| :-------------:|:-----------:|
-| Next Song | Right Arrow Key |
-| Previous Song | Left Arrow Key |
-| Pause Song | Spacebar |
-| Play Song After Pause | Spacebar |
-| Stop Song | ESC |
-| Delete All Song | Del |
+| Functionality         |  Shortcut Key   |
+| :-------------:       |:-----------:    |
+| Next Song             | Right Arrow Key |
+| Previous Song         | Left Arrow Key  |
+| Pause Song            | Spacebar        |
+| Play Song After Pause | Spacebar        |
+| Stop Song             | ESC             |
+| Delete All Song       | Del             |
 </center>
 ---
 
